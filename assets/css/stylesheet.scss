@@ -7,8 +7,7 @@
 
 // Customise header for my own use
 
-$baseurl: "{{ site.baseurl }}";
-$header_background: url('#{$baseurl}/assets/images/banner.jpg');
+$header_background: url("assets/images/banner.jpg");
 $header_border_colour: #E2701C;
 $header_text_colour: govuk-colour("white");
 
