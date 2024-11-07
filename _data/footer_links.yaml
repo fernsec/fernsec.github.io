@@ -1,2 +1,4 @@
 - name: About
   link: /about.html
+- name: GitHub
+  link: https://github.com/fernsec
