@@ -1,0 +1,23 @@
+<footer class="govuk-footer">
+    <div class="govuk-width-container">
+      <div class="govuk-footer__meta">
+        <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+          <ul class="govuk-footer__inline-list">
+            {% for item in site.data.footer_links %}
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" href="{{ item.link }}">
+                  {{ item.name }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+          <div class="govuk-footer__meta-custom">
+            Copyright © EA
+          </div>
+          <div class="govuk-footer__meta-custom">
+            Banner image by <a class="govuk-footer__link" href="https://unsplash.com/@chris_s3tudios">Chris Stein</a> on <a class="govuk-footer__link" href="https://unsplash.com/">Unsplash</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>

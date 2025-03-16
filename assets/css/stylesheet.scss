@@ -1,0 +1,122 @@
+---
+---
+
+// Import all for now
+
+@import "all";
+
+// Customise header for my own use
+
+$header_background: url("/assets/images/banner.jpg");
+$header_border_colour: #E2701C;
+$header_text_colour: govuk-colour("white");
+
+.govuk-header {
+    background: $header_background;
+}
+
+.govuk-header__container {
+    border-bottom: 10px solid $header_border_colour;
+}
+
+.govuk-header__link:link,
+.govuk-header__link:visited {
+    color: $header_text_colour;
+}
+
+// Apply govuk classes to simple tags, so that markdown is styled too
+
+.markdown {
+    h1 {
+        @extend .govuk-heading-xl;
+    }
+    
+    h2 {
+        @extend .govuk-heading-l;
+    }
+    
+    h3 {
+        @extend .govuk-heading-m;
+    }
+    
+    h4 {
+        @extend .govuk-heading-s;
+    }
+
+    p {
+        @extend .govuk-body;
+    }
+
+    a {
+        @extend .govuk-link;
+    }
+
+    blockquote {
+        @extend .govuk-inset-text;
+    }
+
+    code {
+        background: #f5f5f5;
+        padding: 3px 5px;
+        border-radius: 1px;
+        font-family: monaco, Consolas, "Lucida Console", monospace;
+        font-size: 15px;
+        font-size: 0.9375rem;
+        line-height: 1.4;
+        color: #a71d5d;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+    }
+
+    pre {
+        background: #f9f9f8;
+        padding: 15px;
+        overflow: auto;
+        position: relative;
+        border: 1px solid #bfc1c3;
+        display: block;
+        font-family: monospace;
+        unicode-bidi: isolate;
+        white-space: pre;
+        margin: 1em 0px;
+
+        code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+    }
+
+    pre, code {
+        font-family: monospace, monospace;
+        font-size: 1em;
+    }
+
+    ul {
+        @extend .govuk-list;
+        @extend .govuk-list--bullet;
+    }
+
+    ol {
+        @extend .govuk-list;
+        @extend .govuk-list--number;
+    }
+
+    table {
+        @extend .govuk-table;
+
+        th {
+            @extend .govuk-table__header;
+        }
+
+        td {
+            @extend .govuk-table__cell;
+        }
+    }
+}
+
+
+
